@@ -25,7 +25,7 @@ if($getPosts->have_posts()) { ?>
                     foreach($posts as $key => $post) {
                         $postTitle = $post->post_title;
                         $postExcerpt = $post->post_excerpt;
-                        $postDate = $post->post_date;
+                        $postDate = date_i18n('d F Y', strtotime($post->post_date), false, 'pt_BR');
                         $postImage = get_the_post_thumbnail_url($post->ID, 'full') != '' ? get_the_post_thumbnail_url($post->ID, 'full') : catch_that_image($post->ID);
                         $permalink = get_permalink($post->ID);
                         ?>

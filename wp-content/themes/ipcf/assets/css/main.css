@@ -81,3 +81,8 @@ a {
 #hero .card:hover .card-img {
   filter: brightness(1.2);
 }
+
+#services {
+  padding: 4rem 0;
+  background: var(--bs-primary);
+}
