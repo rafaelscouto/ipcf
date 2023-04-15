@@ -7,62 +7,158 @@ function customizer($wp_customize) {
 		'description'    => __( 'Configurações gerais do tema, todas as informações aqui serão exibidas no rodapé.', 'rctheme' ),
 	));
 
+	// section copyrtight
 	$wp_customize->add_section(
-		'section_informations',
+		'section_informations_copyrtight',
 		array(
-			'title' => __('Rodapé - Informações de Contato', 'rctheme'),
+			'title' => __('Copyright', 'rctheme'),
 			'panel' => 'information',
 			'priority' => 9,
 		)
 	);
 
-	// Rodapé - Contato //
 	$wp_customize->add_setting(
-		'rodape_contato',
+		'footer_copy',
 	);
 	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'rodape_contato',
+		'footer_copy',
 		array(
-				'label' => __('Contato:', 'rctheme'),
-				'description' => 'Insira as informações de contato',
-				'section' => 'section_informations',
-				'settings' => 'rodape_contato',
+				'label' => __('Copyright:', 'rctheme'),
+				'description' => 'Insira as informações de copyright',
+				'section' => 'section_informations_copyrtight',
+				'settings' => 'footer_copy',
 				'type' => 'textarea'
 			)
 		)
 	);
 
-	// Rodapé - Endereço //
+	// section social media
+	$wp_customize->add_section(
+		'section_informations_social_media',
+		array(
+			'title' => __('Mídias Sociais', 'rctheme'),
+			'panel' => 'information',
+			'priority' => 9,
+		)
+	);
+
 	$wp_customize->add_setting(
-		'rodape_endereco'
+		'footer_social_media_instagram_icon'
 	);
 	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'rodape_endereco',
+		'footer_social_media_instagram_icon',
 		array(
-				'label' => __('Endereço:', 'rctheme'),
-				'description' => 'Insira o endereço',
-				'section' => 'section_informations',
-				'settings' => 'rodape_endereco',
-				'type' => 'textarea'
+				'label' => __('Instagram:', 'rctheme'),
+				'description' => 'Insira a classe do ícone do instagram',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_instagram_icon',
+				'type' => 'text'
+			)
+		)
+	);
+	$wp_customize->add_setting(
+		'footer_social_media_instagram_url'
+	);
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'footer_social_media_instagram_url',
+		array(
+				'description' => 'Insira a url do perfil do instagram',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_instagram_url',
+				'type' => 'url',
 			)
 		)
 	);
 
-	// Rodapé - Horário de Funcionamento //
 	$wp_customize->add_setting(
-		'rodape_horario_funcionamento'
+		'footer_social_media_facebook_icon'
 	);
 	$wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'rodape_horario_funcionamento',
+		'footer_social_media_facebook_icon',
 		array(
-				'label' => 'Horário de Funcionamento:',
-				'description' => 'Insira o horário de funcionamento',
-				'section' => 'section_informations',
-				'settings' => 'rodape_horario_funcionamento',
-				'type' => 'textarea'
+				'label' => __('Facebook:', 'rctheme'),
+				'description' => 'Insira a classe do ícone do facebook',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_facebook_icon',
+				'type' => 'text'
+			)
+		)
+	);
+	$wp_customize->add_setting(
+		'footer_social_media_facebook_url'
+	);
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'footer_social_media_facebook_url',
+		array(
+				'description' => 'Insira a url do perfil do facebook',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_facebook_url',
+				'type' => 'url'
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'footer_social_media_twitter_icon'
+	);
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'footer_social_media_twitter_icon',
+		array(
+				'label' => __('Twitter:', 'rctheme'),
+				'description' => 'Insira a classe do ícone do twitter',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_twitter_icon',
+				'type' => 'text'
+			)
+		)
+	);
+	$wp_customize->add_setting(
+		'footer_social_media_twitter_url'
+	);
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'footer_social_media_twitter_url',
+		array(
+				'description' => 'Insira a url do perfil do twitter',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_twitter_url',
+				'type' => 'url'
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'footer_social_media_youtube_icon'
+	);
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'footer_social_media_youtube_icon',
+		array(
+				'label' => __('YouTube:', 'rctheme'),
+				'description' => 'Insira a classe do ícone do youtube',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_youtube_icon',
+				'type' => 'text'
+			)
+		)
+	);
+	$wp_customize->add_setting(
+		'footer_social_media_youtube_url'
+	);
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'footer_social_media_youtube_url',
+		array(
+				'description' => 'Insira a url do perfil do youtube',
+				'section' => 'section_informations_social_media',
+				'settings' => 'footer_social_media_youtube_url',
+				'type' => 'url'
 			)
 		)
 	);
