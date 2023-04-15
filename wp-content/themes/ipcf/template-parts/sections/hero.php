@@ -30,7 +30,7 @@ if($getPosts->have_posts()) { ?>
                         $permalink = get_permalink($post->ID);
                         ?>
                         <div class="item-<?php echo $count++; ?>">
-                            <a class="card text-bg-dark">
+                            <a class="card text-bg-dark" href="<?php the_permalink(); ?>">
                                 <img src="<?php echo $postImage; ?>" class="card-img" alt="<?php echo $postTilte; ?>">
                                 <div class="card-img-overlay">
                                     <div class="card-box">
