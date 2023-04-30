@@ -1,8 +1,7 @@
-// on load of the page, use javascript pure
+// on load of the page
 jQuery(document).ready(function($) {
 
     // menu
-    // get the .dropdown-toggle::after element and add the class .fa-angle-down
     $('.dropdown-toggle').append('<i class="fa fa-angle-down"></i>');
 
     // services
@@ -15,7 +14,7 @@ jQuery(document).ready(function($) {
         navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         responsive:{
             0:{
-                items:1
+                items:2
             },
             600:{
                 items:3
@@ -46,6 +45,24 @@ jQuery(document).ready(function($) {
         searchInput.value = '';
     });
 
+    // search mobile
+    const searchMobileIcon = document.querySelector('.search-icon-mobile');
+    const cancelMobileIcon = document.querySelector('.cancel-icon-mobile');
+
+    searchMobileIcon.addEventListener('click', function() {
+        searchMobileIcon.style.display = 'none';
+        cancelMobileIcon.style.display = 'block';
+        buscaDiv.classList.add('aberto');
+        searchInput.focus();
+    });
+    cancelMobileIcon.addEventListener('click', function(event) {
+        event.preventDefault();
+        cancelMobileIcon.style.display = 'none';
+        searchMobileIcon.style.display = 'block';
+        buscaDiv.classList.remove('aberto');
+        searchInput.value = '';
+    });
+
     // menu dropdown
     let dropdowns = document.querySelectorAll('#menu-main .dropdown');
     Array.prototype.forEach.call(dropdowns, function(dropdown) {
@@ -57,5 +74,18 @@ jQuery(document).ready(function($) {
         dropdown.addEventListener('mouseleave', function() {
         this.querySelector('.dropdown-menu').classList.remove('show');
         });
+    });
+
+    let phone = document.querySelector('#newsletter-input-phone');
+
+    // apply mask on phone input on newsletter form using jquery.inputmask.min.js and remove on submit
+    phone.addEventListener('focus', function() {
+        $(this).inputmask("(99) 99999-9999");
+    });
+
+    // remove mask on submit
+    let form = document.querySelector('.wpcf7-form');
+    form.addEventListener('submit', function() {
+        $(this).inputmask("remove");
     });
 });

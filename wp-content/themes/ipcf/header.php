@@ -24,6 +24,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <?php get_template_part('template-parts/header/header'); ?>
     <?php get_template_part('template-parts/nav/menu'); ?>
+    <?php show_custom_breadcrumbs(); ?>

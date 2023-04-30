@@ -10,14 +10,22 @@
                     'menu_id'               => 'menu-main',
                     'menu_class'            => 'navbar-nav justify-content-center',
                     'container'             => 'div',
-                    'container_class'       => 'offcanvas offcanvas-end ',
+                    'container_class'       => 'offcanvas offcanvas-end',
                     'container_id'          => 'navbarNavDropdown',
                     'container_aria_label'  => 'navbarNavDropdownLabel',
-                    'items_wrap'            => '<ul id="%1$s" class="%2$s offcanvas-body"><div class="offcanvas-header px-0 mt-2"><h5 class="offcanvas-title" id="navbarNavDropdownLabel">Menu</h5><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>%3$s</ul>',
+                    'items_wrap'            => '<ul id="%1$s" class="%2$s offcanvas-body"><div class="offcanvas-header mt-2"><h5 class="offcanvas-title" id="navbarNavDropdownLabel">Menu</h5><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>%3$s</ul>',
 
                 )
             );
         ?>
+        <ul class="navbar-nav navbar-mobile">
+            <li class="search-icon-mobile nav-item">
+                <a href="#" class="nav-link"><i class="_mi dashicons dashicons-search" aria-hidden="true"></i></a>
+            </li>
+            <li class="cancel-icon-mobile nav-item">
+                <a href="#" class="nav-link"><i class="_mi dashicons dashicons-no" aria-hidden="true"></i></a>
+            </li>
+        </ul>
     </div>
 </nav>
 <section id="busca">
