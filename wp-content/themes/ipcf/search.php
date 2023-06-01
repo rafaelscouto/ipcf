@@ -10,8 +10,8 @@ $the_query = new WP_Query( $args );
 <section id="search">
     <div class="container">
         <?php
+        echo '<h2 class="title-page">Texto ou palavra pesquisada: <span class="fw-bold">' . get_search_query() . '</span></h3>';
         if ($the_query->have_posts()) {
-            echo '<h2 class="title-page">Texto ou palavra pesquisada: <span class="fw-bold">' . get_search_query() . '</span></h3>';
             echo '<ul class="list-group list-group-flush">';
             while($the_query->have_posts()) {
                 $the_query->the_post(); $slug = $post->post_name;
@@ -22,8 +22,7 @@ $the_query = new WP_Query( $args );
             echo '</ul>';
             wp_reset_query();
         } else {            
-            echo '<script>window.location.href="' . get_bloginfo('url') . '/404";</script>';
-            exit;
+            get_template_part('template-parts/content/not-found');
         }
         ?>
     </div>

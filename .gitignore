@@ -4,3 +4,5 @@ wp-config.php
 /wp-content/themes/ipcf/gulpfile.js
 /wp-content/themes/ipcf/node_modules
 /wp-content/themes/page-builder-framework
+/wp-content/uploads
+/wp-content/themes/ipcf/assets/lista_ipcf.csv

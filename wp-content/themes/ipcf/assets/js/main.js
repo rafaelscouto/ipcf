@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
         loop:true,
         margin:20,
         nav:true,
+        dots: false,
         responsiveClass:true,
         items:4,
         navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
