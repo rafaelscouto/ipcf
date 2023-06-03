@@ -8,15 +8,16 @@ $args = array(
 );
 
 $getPosts = new WP_Query($args);
-$posts = $getPosts->posts;
-$post1 = $posts[0];
-$posts2 = array_slice($posts, 1, 2);
-$posts3 = array_slice($posts, 3, 4);
 
-$numberOfRows = 4;
-$count = 1;
+if($getPosts->have_posts()) {
+    $posts = $getPosts->posts;
+    $post1 = $posts[0];
+    $posts2 = array_slice($posts, 1, 2);
+    $posts3 = array_slice($posts, 3, 4);
 
-if($getPosts->have_posts()) { ?>
+    $numberOfRows = 4;
+    $count = 1;
+    ?>
     <section id="hero">
         <div class="container">
             <div class="row">
