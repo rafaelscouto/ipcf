@@ -1,7 +1,8 @@
 <?php
 $args = array(
     'post_type' => 'services',
-    'posts_status' => 'publish'
+    'posts_status' => 'publish',
+    'order' => 'ASC',
 );
 
 $getPosts = new WP_Query($args);

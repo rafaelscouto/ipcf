@@ -261,6 +261,61 @@ a {
   font-size: 1rem;
 }
 
+#birthdays {
+  padding: 2rem 0;
+  background: rgba(13, 110, 253, 0.2);
+}
+#birthdays .sec-title {
+  margin: 0 0 1.5rem;
+  color: var(--bs-gray);
+}
+#birthdays .owl-carousel .owl-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: -50px 0 0 0;
+  padding: 0 8px;
+  text-align: end;
+}
+#birthdays .owl-carousel .owl-nav button.owl-next,
+#birthdays .owl-carousel .owl-nav button.owl-prev {
+  background: #ffffff;
+  color: var(--bs-gray);
+  padding: 5px 10px !important;
+}
+#birthdays .owl-carousel .owl-nav button.owl-next:hover, #birthdays .owl-carousel .owl-nav button.owl-next:focus, #birthdays .owl-carousel .owl-nav button.owl-next:active,
+#birthdays .owl-carousel .owl-nav button.owl-prev:hover,
+#birthdays .owl-carousel .owl-nav button.owl-prev:focus,
+#birthdays .owl-carousel .owl-nav button.owl-prev:active {
+  background: var(--bs-gray);
+  color: #ffffff;
+}
+#birthdays .owl-carousel .card {
+  border: 0;
+  color: var(--bs-gray);
+  height: 90px;
+}
+#birthdays .owl-carousel .card i {
+  font-size: 0.75rem;
+}
+#birthdays .owl-carousel .card .card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+#birthdays .owl-carousel .card .card-subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+#birthdays .owl-carousel .card .card-title,
+#birthdays .owl-carousel .card .card-subtitle {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+
 #benefits {
   border-top: 1px solid var(--bs-light);
 }
@@ -291,6 +346,9 @@ a {
   color: var(--bs-light);
 }
 
+#squad {
+  border-top: 1px solid var(--bs-light);
+}
 #squad .sec-title {
   margin: 0 0 1.5rem;
   color: var(--bs-gray);
