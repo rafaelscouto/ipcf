@@ -22,10 +22,10 @@
         $url_twitter = get_theme_mod('footer_social_media_twitter_url');
         ?>
         <div class="footer-social-media d-flex">
-          <a href="<?php echo $url_instagram; ?>" class="btn"><?php echo $icon_instagram; ?></a>
-          <a href="<?php echo $url_facebook; ?>" class="btn"><?php echo $icon_facebook; ?></a>
-          <a href="<?php echo $url_twitter; ?>" class="btn"><?php echo $icon_twitter; ?></a>
-          <a href="<?php echo $url_youtube; ?>" class="btn"><?php echo $icon_youtube; ?></a>
+          <a href="<?php echo $url_instagram; ?>" class="btn" target="_blank"><?php echo $icon_instagram; ?></a>
+          <a href="<?php echo $url_facebook; ?>" class="btn" target="_blank"><?php echo $icon_facebook; ?></a>
+          <a href="<?php echo $url_twitter; ?>" class="btn" target="_blank"><?php echo $icon_twitter; ?></a>
+          <a href="<?php echo $url_youtube; ?>" class="btn" target="_blank"><?php echo $icon_youtube; ?></a>
         </div>
   </div>
 </footer>

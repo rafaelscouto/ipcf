@@ -11,6 +11,8 @@ jQuery(document).ready(function($) {
         nav:true,
         dots: false,
         responsiveClass:true,
+        autoplay:true,
+        autoplayTimeout:3500,
         items:4,
         navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
         responsive:{
