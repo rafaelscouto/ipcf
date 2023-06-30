@@ -25,12 +25,12 @@ if($getPosts->have_posts()) { ?>
                         <div class="item">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <?php the_title(); ?>
-                                    </h5>
                                     <h6 class="card-subtitle">
-                                        <?php echo $day . '/' . $month; ?>
+                                        <i class="fa-solid fa-cake-candles"></i> <?php echo $day . '/' . $month; ?>
                                     </h6>
+                                    <h5 class="card-title">
+                                        <i class="fa-solid fa-user"></i> <?php the_title(); ?>
+                                    </h5>
                                 </div>
                             </div>
                         </div>
