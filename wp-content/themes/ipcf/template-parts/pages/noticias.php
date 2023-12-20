@@ -17,7 +17,7 @@ if($getPosts->have_posts()) { ?>
                 <?php foreach($getPosts->posts as $key => $post) { ?>
                     <div class="col">
                         <a class="card" href="<?php the_permalink(); ?>">
-                            <img src="<?php the_post_thumbnail_url() ?>" class="card-img-top" alt="<?php echo $post->post_title; ?>">
+                            <img src="<?php echo get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url($post->ID, 'full') : catch_that_image($post->ID) ?>" class="card-img-top" alt="<?php echo $post->post_title; ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $post->post_title; ?></h5>
                             </div>

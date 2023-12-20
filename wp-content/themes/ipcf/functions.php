@@ -87,21 +87,28 @@ function prefix_bs5_dropdown_data_attribute( $atts, $item, $args ) {
 add_filter('nav_menu_link_attributes', 'prefix_bs5_dropdown_data_attribute', 20, 3);
 
 function catch_that_image($post_id) {
-	global $post, $posts;
 	$first_img = '';
-	ob_start();
-	ob_end_clean();
 
-	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	// Obtenha o objeto do post
+	$post = get_post($post_id);
 
-	$first_img = $matches [1] [0];
-  
-	if(empty($first_img)){ //Defines a default image
-	  $first_img = "";
+	if (!$post) {
+		return $first_img;
+	}
+
+	// Use a função wp_kses para analisar e limpar o conteúdo do post
+	$post_content = wp_kses($post->post_content, array('img' => array('src' => true)));
+
+	// Use a função preg_match para encontrar a primeira imagem
+	$output = preg_match('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post_content, $matches);
+
+	if ($output === 1) {
+		$first_img = $matches[1];
 	}
 
 	return $first_img;
 }
+
 
 function show_custom_breadcrumbs() {
 	if ( !is_front_page() && !is_404() ) {
